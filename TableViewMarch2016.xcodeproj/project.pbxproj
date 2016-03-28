@@ -8,20 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		F224E00F1CA9A796001786C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E00E1CA9A796001786C9 /* AppDelegate.swift */; };
-		F224E0111CA9A796001786C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E0101CA9A796001786C9 /* ViewController.swift */; };
-		F224E0141CA9A796001786C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F224E0121CA9A796001786C9 /* Main.storyboard */; };
 		F224E0161CA9A796001786C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F224E0151CA9A796001786C9 /* Assets.xcassets */; };
 		F224E0191CA9A796001786C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F224E0171CA9A796001786C9 /* LaunchScreen.storyboard */; };
+		F224E0211CA9A889001786C9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E0201CA9A889001786C9 /* TableViewController.swift */; };
+		F224E0241CA9A91F001786C9 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E0231CA9A91F001786C9 /* Configurable.swift */; };
+		F224E0271CA9AAD8001786C9 /* UserSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E0261CA9AAD8001786C9 /* UserSearchTableViewController.swift */; };
+		F224E02A1CA9ABF4001786C9 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E0291CA9ABF4001786C9 /* APIClient.swift */; };
+		F224E02D1CA9AC35001786C9 /* GithubURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E02C1CA9AC35001786C9 /* GithubURL.swift */; };
+		F224E02F1CA9AC5A001786C9 /* DictCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E02E1CA9AC5A001786C9 /* DictCreatable.swift */; };
+		F224E0311CA9ACBE001786C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E0301CA9ACBE001786C9 /* User.swift */; };
+		F224E0361CA9AF27001786C9 /* RepositoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E0351CA9AF27001786C9 /* RepositoriesTableViewController.swift */; };
+		F224E0381CA9AF8A001786C9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E0371CA9AF8A001786C9 /* Repository.swift */; };
+		F224E03A1CA9AFD0001786C9 /* LabelsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E0391CA9AFD0001786C9 /* LabelsPresentable.swift */; };
+		F224E03C1CA9B045001786C9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E03B1CA9B045001786C9 /* DetailViewController.swift */; };
+		F224E03F1CA9B092001786C9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E03E1CA9B092001786C9 /* DetailView.swift */; };
+		F224E0411CA9B115001786C9 /* TwoLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E0401CA9B115001786C9 /* TwoLabelCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F224E00B1CA9A796001786C9 /* TableViewMarch2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewMarch2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F224E00E1CA9A796001786C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F224E0101CA9A796001786C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F224E0131CA9A796001786C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F224E0151CA9A796001786C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F224E0181CA9A796001786C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F224E01A1CA9A796001786C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F224E0201CA9A889001786C9 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = Base/TableViewController.swift; sourceTree = "<group>"; };
+		F224E0231CA9A91F001786C9 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configurable.swift; path = Protocols/Configurable.swift; sourceTree = "<group>"; };
+		F224E0261CA9AAD8001786C9 /* UserSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSearchTableViewController.swift; path = UserSearch/UserSearchTableViewController.swift; sourceTree = "<group>"; };
+		F224E0291CA9ABF4001786C9 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = Networking/APIClient.swift; sourceTree = "<group>"; };
+		F224E02C1CA9AC35001786C9 /* GithubURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubURL.swift; path = Networking/GithubURL.swift; sourceTree = "<group>"; };
+		F224E02E1CA9AC5A001786C9 /* DictCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictCreatable.swift; path = Protocols/DictCreatable.swift; sourceTree = "<group>"; };
+		F224E0301CA9ACBE001786C9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = UserSearch/User.swift; sourceTree = "<group>"; };
+		F224E0351CA9AF27001786C9 /* RepositoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoriesTableViewController.swift; path = Repositories/RepositoriesTableViewController.swift; sourceTree = "<group>"; };
+		F224E0371CA9AF8A001786C9 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Repositories/Repository.swift; sourceTree = "<group>"; };
+		F224E0391CA9AFD0001786C9 /* LabelsPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabelsPresentable.swift; path = Protocols/LabelsPresentable.swift; sourceTree = "<group>"; };
+		F224E03B1CA9B045001786C9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Detail/DetailViewController.swift; sourceTree = "<group>"; };
+		F224E03E1CA9B092001786C9 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailView.swift; path = Detail/DetailView.swift; sourceTree = "<group>"; };
+		F224E0401CA9B115001786C9 /* TwoLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwoLabelCell.swift; path = Base/TwoLabelCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +77,72 @@
 			isa = PBXGroup;
 			children = (
 				F224E00E1CA9A796001786C9 /* AppDelegate.swift */,
-				F224E0101CA9A796001786C9 /* ViewController.swift */,
-				F224E0121CA9A796001786C9 /* Main.storyboard */,
+				F224E02B1CA9AC01001786C9 /* Networking */,
+				F224E0251CA9A92C001786C9 /* Protocols */,
+				F224E0221CA9A8B7001786C9 /* Base */,
+				F224E0281CA9AB3B001786C9 /* UserSearch */,
+				F224E0341CA9AEFD001786C9 /* Repositories */,
+				F224E03D1CA9B04F001786C9 /* Detail */,
 				F224E0151CA9A796001786C9 /* Assets.xcassets */,
 				F224E0171CA9A796001786C9 /* LaunchScreen.storyboard */,
 				F224E01A1CA9A796001786C9 /* Info.plist */,
 			);
 			path = TableViewMarch2016;
+			sourceTree = "<group>";
+		};
+		F224E0221CA9A8B7001786C9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F224E0201CA9A889001786C9 /* TableViewController.swift */,
+				F224E0401CA9B115001786C9 /* TwoLabelCell.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		F224E0251CA9A92C001786C9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F224E0231CA9A91F001786C9 /* Configurable.swift */,
+				F224E02E1CA9AC5A001786C9 /* DictCreatable.swift */,
+				F224E0391CA9AFD0001786C9 /* LabelsPresentable.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		F224E0281CA9AB3B001786C9 /* UserSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F224E0261CA9AAD8001786C9 /* UserSearchTableViewController.swift */,
+				F224E0301CA9ACBE001786C9 /* User.swift */,
+			);
+			name = UserSearch;
+			sourceTree = "<group>";
+		};
+		F224E02B1CA9AC01001786C9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F224E0291CA9ABF4001786C9 /* APIClient.swift */,
+				F224E02C1CA9AC35001786C9 /* GithubURL.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		F224E0341CA9AEFD001786C9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F224E0351CA9AF27001786C9 /* RepositoriesTableViewController.swift */,
+				F224E0371CA9AF8A001786C9 /* Repository.swift */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		F224E03D1CA9B04F001786C9 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F224E03B1CA9B045001786C9 /* DetailViewController.swift */,
+				F224E03E1CA9B092001786C9 /* DetailView.swift */,
+			);
+			name = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +205,6 @@
 			files = (
 				F224E0191CA9A796001786C9 /* LaunchScreen.storyboard in Resources */,
 				F224E0161CA9A796001786C9 /* Assets.xcassets in Resources */,
-				F224E0141CA9A796001786C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +215,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F224E0111CA9A796001786C9 /* ViewController.swift in Sources */,
+				F224E03C1CA9B045001786C9 /* DetailViewController.swift in Sources */,
+				F224E02D1CA9AC35001786C9 /* GithubURL.swift in Sources */,
+				F224E0361CA9AF27001786C9 /* RepositoriesTableViewController.swift in Sources */,
+				F224E03F1CA9B092001786C9 /* DetailView.swift in Sources */,
+				F224E0271CA9AAD8001786C9 /* UserSearchTableViewController.swift in Sources */,
+				F224E0211CA9A889001786C9 /* TableViewController.swift in Sources */,
+				F224E0381CA9AF8A001786C9 /* Repository.swift in Sources */,
+				F224E0241CA9A91F001786C9 /* Configurable.swift in Sources */,
+				F224E0311CA9ACBE001786C9 /* User.swift in Sources */,
+				F224E02F1CA9AC5A001786C9 /* DictCreatable.swift in Sources */,
 				F224E00F1CA9A796001786C9 /* AppDelegate.swift in Sources */,
+				F224E0411CA9B115001786C9 /* TwoLabelCell.swift in Sources */,
+				F224E03A1CA9AFD0001786C9 /* LabelsPresentable.swift in Sources */,
+				F224E02A1CA9ABF4001786C9 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F224E0121CA9A796001786C9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F224E0131CA9A796001786C9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F224E0171CA9A796001786C9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
