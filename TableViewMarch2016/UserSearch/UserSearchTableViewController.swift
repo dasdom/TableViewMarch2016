@@ -8,12 +8,12 @@
 
 import UIKit
 
-class UserSearchTableViewController<Cell: UITableViewCell where Cell: Configurable>: TableViewController<Cell>, UISearchBarDelegate {
+class UserSearchTableViewController<T: protocol<DictCreatable, LabelsPresentable, UserProtocol>>: TableViewController<T, TwoLabelCell>, UISearchBarDelegate {
 
   var searchString: String? {
     didSet {
       guard let searchString = searchString where searchString.characters.count > 0 else { return }
-      let fetch = APIClient<User>().fetchUsers(forSearchString: searchString)
+      let fetch = APIClient<T>().fetchUsers(forSearchString: searchString)
       fetch { (items, error) -> Void in
         guard let theItems = items else { return }
         self.data = theItems.map { $0 }
@@ -38,10 +38,9 @@ class UserSearchTableViewController<Cell: UITableViewCell where Cell: Configurab
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    if let user = self.data[indexPath.row] as? User {
-      let next = RepositoriesTableViewController<TwoLabelCell>()
-      next.username = user.name
-      navigationController?.pushViewController(next, animated: true)
-    }
+    let next = RepositoriesTableViewController<Repository>()
+    next.username = self.data[indexPath.row].name
+    navigationController?.pushViewController(next, animated: true)
+    
   }
 }

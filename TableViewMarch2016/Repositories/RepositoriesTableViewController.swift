@@ -8,12 +8,12 @@
 
 import UIKit
 
-class RepositoriesTableViewController<Cell: UITableViewCell where Cell: Configurable>: TableViewController<Cell> {
+class RepositoriesTableViewController<T: protocol<DictCreatable, LabelsPresentable>>: TableViewController<T, TwoLabelCell> {
 
   var username: String? {
     didSet {
       guard let username = username where username.characters.count > 0 else { return }
-      let fetch = APIClient<Repository>().fetchItems(forUser: username)
+      let fetch = APIClient<T>().fetchItems(forUser: username)
       fetch { (items, error) -> Void in
         self.title = username
         guard let theItems = items else { return }

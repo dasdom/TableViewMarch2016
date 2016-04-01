@@ -41,14 +41,13 @@ class TwoLabelCell: UITableViewCell, Configurable {
   }
   
   func config(withItem item: Any) {
-    if let item = item as? LabelsPresentable {
-      let texts = item.texts
-      if texts.count > 0 {
-        nameLabel.text = texts[0]
-      }
-      if texts.count > 1 && texts[1].characters.count > 0 {
-        descriptionLabel.text = texts[1]
-      }
+    guard let item = item as? LabelsPresentable else { return }
+    let texts = item.texts
+    if texts.count > 0 {
+      nameLabel.text = texts[0]
+    }
+    if texts.count > 1 && texts[1].characters.count > 0 {
+      descriptionLabel.text = texts[1]
     }
   }
 }

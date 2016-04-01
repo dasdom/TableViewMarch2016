@@ -8,10 +8,10 @@
 
 import UIKit
 
-class TableViewController<Cell: UITableViewCell where Cell: Configurable>: UITableViewController {
-
-  private let cellIdentifier = "Cell"
-  var data = [Any]() {
+class TableViewController<T, Cell: UITableViewCell where Cell: Configurable>: UITableViewController {
+  
+  private let cellIdentifier = String(Cell)
+  var data = [T]() {
     didSet {
       tableView.reloadData()
       if tableView.numberOfRowsInSection(0) > 0 {

@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct User: LabelsPresentable, DictCreatable {
+protocol UserProtocol {
+  var name: String { get }
+}
+
+struct User: LabelsPresentable, DictCreatable, UserProtocol {
   let id: Int
   let name: String
   

@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-    window?.rootViewController = UINavigationController(rootViewController: UserSearchTableViewController<TwoLabelCell>())
+    window?.rootViewController = UINavigationController(rootViewController: UserSearchTableViewController<User>())
     window?.makeKeyAndVisible()
     return true
   }
