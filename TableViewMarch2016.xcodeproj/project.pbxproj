@@ -23,6 +23,8 @@
 		F224E03C1CA9B045001786C9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E03B1CA9B045001786C9 /* DetailViewController.swift */; };
 		F224E03F1CA9B092001786C9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E03E1CA9B092001786C9 /* DetailView.swift */; };
 		F224E0411CA9B115001786C9 /* TwoLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F224E0401CA9B115001786C9 /* TwoLabelCell.swift */; };
+		F22F07B01CB4D943003270FC /* TraditionalUserSerachTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F07AF1CB4D943003270FC /* TraditionalUserSerachTableViewController.swift */; };
+		F22F07B21CB76E73003270FC /* TraditionalRepositoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F07B11CB76E73003270FC /* TraditionalRepositoriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		F224E03B1CA9B045001786C9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Detail/DetailViewController.swift; sourceTree = "<group>"; };
 		F224E03E1CA9B092001786C9 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailView.swift; path = Detail/DetailView.swift; sourceTree = "<group>"; };
 		F224E0401CA9B115001786C9 /* TwoLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwoLabelCell.swift; path = Base/TwoLabelCell.swift; sourceTree = "<group>"; };
+		F22F07AF1CB4D943003270FC /* TraditionalUserSerachTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraditionalUserSerachTableViewController.swift; path = UserSearch/TraditionalUserSerachTableViewController.swift; sourceTree = "<group>"; };
+		F22F07B11CB76E73003270FC /* TraditionalRepositoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraditionalRepositoriesTableViewController.swift; path = Repositories/TraditionalRepositoriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			children = (
 				F224E0261CA9AAD8001786C9 /* UserSearchTableViewController.swift */,
 				F224E0301CA9ACBE001786C9 /* User.swift */,
+				F22F07AF1CB4D943003270FC /* TraditionalUserSerachTableViewController.swift */,
 			);
 			name = UserSearch;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			children = (
 				F224E0351CA9AF27001786C9 /* RepositoriesTableViewController.swift */,
 				F224E0371CA9AF8A001786C9 /* Repository.swift */,
+				F22F07B11CB76E73003270FC /* TraditionalRepositoriesTableViewController.swift */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -220,11 +226,13 @@
 				F224E0361CA9AF27001786C9 /* RepositoriesTableViewController.swift in Sources */,
 				F224E03F1CA9B092001786C9 /* DetailView.swift in Sources */,
 				F224E0271CA9AAD8001786C9 /* UserSearchTableViewController.swift in Sources */,
+				F22F07B21CB76E73003270FC /* TraditionalRepositoriesTableViewController.swift in Sources */,
 				F224E0211CA9A889001786C9 /* TableViewController.swift in Sources */,
 				F224E0381CA9AF8A001786C9 /* Repository.swift in Sources */,
 				F224E0241CA9A91F001786C9 /* Configurable.swift in Sources */,
 				F224E0311CA9ACBE001786C9 /* User.swift in Sources */,
 				F224E02F1CA9AC5A001786C9 /* DictCreatable.swift in Sources */,
+				F22F07B01CB4D943003270FC /* TraditionalUserSerachTableViewController.swift in Sources */,
 				F224E00F1CA9A796001786C9 /* AppDelegate.swift in Sources */,
 				F224E0411CA9B115001786C9 /* TwoLabelCell.swift in Sources */,
 				F224E03A1CA9AFD0001786C9 /* LabelsPresentable.swift in Sources */,
@@ -372,6 +380,7 @@
 				F224E01F1CA9A796001786C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
