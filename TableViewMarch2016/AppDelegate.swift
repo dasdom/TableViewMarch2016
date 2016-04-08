@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-//    window?.rootViewController = UINavigationController(rootViewController: UserSearchTableViewController<User>())
-    window?.rootViewController = UINavigationController(rootViewController: TraditionalUserSerachTableViewController())
+    window?.rootViewController = UINavigationController(rootViewController: UserSearchTableViewController<User>())
+//    window?.rootViewController = UINavigationController(rootViewController: TraditionalUserSerachTableViewController())
     window?.makeKeyAndVisible()
     return true
   }
