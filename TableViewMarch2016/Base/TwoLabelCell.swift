@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TwoLabelCell: UITableViewCell, Configurable {
+class TwoLabelCell<DataType where DataType: LabelsPresentable>:UITableViewCell, Configurable {
 
   let nameLabel: UILabel
   let descriptionLabel: UILabel
@@ -40,8 +40,8 @@ class TwoLabelCell: UITableViewCell, Configurable {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func config(withItem item: Any) {
-    guard let item = item as? LabelsPresentable else { return }
+  func config(withItem item: DataType) {
+//    guard let item = item as? LabelsPresentable else { return }
     let texts = item.texts
     if texts.count > 0 {
       nameLabel.text = texts[0]

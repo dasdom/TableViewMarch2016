@@ -10,15 +10,15 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-  var window: UIWindow? = UIWindow(frame: UIScreen.mainScreen().bounds)
-
-  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-    window?.rootViewController = UINavigationController(rootViewController: UserSearchTableViewController<User>())
-//    window?.rootViewController = UINavigationController(rootViewController: TraditionalUserSerachTableViewController())
-    window?.makeKeyAndVisible()
-    return true
-  }
+    
+    var window: UIWindow? = UIWindow(frame: UIScreen.mainScreen().bounds)
+    
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        window?.rootViewController = UINavigationController(rootViewController: UserSearchTableViewController())
+        //    window?.rootViewController = UINavigationController(rootViewController: TraditionalUserSerachTableViewController())
+        window?.makeKeyAndVisible()
+        return true
+    }
 }
 
