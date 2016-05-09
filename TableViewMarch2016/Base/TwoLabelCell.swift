@@ -9,7 +9,7 @@
 import UIKit
 
 class TwoLabelCell<DataType where DataType: LabelsPresentable>:UITableViewCell, Configurable {
-
+  
   let nameLabel: UILabel
   let descriptionLabel: UILabel
   
@@ -41,7 +41,6 @@ class TwoLabelCell<DataType where DataType: LabelsPresentable>:UITableViewCell, 
   }
   
   func config(withItem item: DataType) {
-//    guard let item = item as? LabelsPresentable else { return }
     let texts = item.texts
     if texts.count > 0 {
       nameLabel.text = texts[0]

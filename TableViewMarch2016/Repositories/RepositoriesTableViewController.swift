@@ -9,22 +9,22 @@
 import UIKit
 
 class RepositoriesTableViewController: TableViewController<TwoLabelCell<Repository>> {
-    
-    var username: String? {
-        didSet {
-            guard let username = username where username.characters.count > 0 else { return }
-            let fetch = APIClient<Repository>().fetchItems(forUser: username)
-            fetch { (items, error) -> Void in
-                self.title = username
-                guard let theItems = items else { return }
-                self.data = theItems.map { $0 }
-            }
-        }
+  
+  var username: String? {
+    didSet {
+      guard let username = username where username.characters.count > 0 else { return }
+      let fetch = APIClient<Repository>().fetchItems(forUser: username)
+      fetch { (items, error) -> Void in
+        self.title = username
+        guard let theItems = items else { return }
+        self.data = theItems.map { $0 }
+      }
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let nextViewController = DetailViewController()
-        nextViewController.repository = data[indexPath.row] //as? Repository
-        navigationController?.pushViewController(nextViewController, animated: true)
-    }
+  }
+  
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    let nextViewController = DetailViewController()
+    nextViewController.repository = data[indexPath.row] //as? Repository
+    navigationController?.pushViewController(nextViewController, animated: true)
+  }
 }
