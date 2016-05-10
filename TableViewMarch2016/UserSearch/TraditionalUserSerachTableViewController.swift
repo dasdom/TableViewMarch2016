@@ -22,7 +22,7 @@ class TraditionalUserSerachTableViewController: UITableViewController, UISearchB
     searchBar.delegate = self
     tableView.tableHeaderView = searchBar
     
-    tableView.registerClass(TwoLabelCell.self, forCellReuseIdentifier: "Cell")
+    tableView.registerClass(TwoLabelCell<User>.self, forCellReuseIdentifier: "Cell")
     
     tableView.estimatedRowHeight = 50
     tableView.rowHeight = UITableViewAutomaticDimension
@@ -36,10 +36,10 @@ extension TraditionalUserSerachTableViewController {
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-  
+    
     let user = users[indexPath.row]
     
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TwoLabelCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TwoLabelCell<User>
     cell.nameLabel.text = user.name
     return cell
   }
@@ -63,7 +63,7 @@ extension TraditionalUserSerachTableViewController {
     let fetch = APIClient<User>().fetchUsers(forSearchString: searchString)
     fetch { (items, error) -> Void in
       guard let theItems = items else { return }
-//      self.users = theItems.map { $0 }
+      //      self.users = theItems.map { $0 }
       self.users = theItems
       self.tableView.reloadData()
     }

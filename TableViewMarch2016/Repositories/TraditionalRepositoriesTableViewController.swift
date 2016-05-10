@@ -21,12 +21,12 @@ class TraditionalRepositoriesTableViewController: UITableViewController {
     fetch { (items, error) -> Void in
       self.title = username
       guard let theItems = items else { return }
-//      self.data = theItems.map { $0 }
+      //      self.data = theItems.map { $0 }
       self.repositories = theItems
       self.tableView.reloadData()
     }
     
-    tableView.registerClass(TwoLabelCell.self, forCellReuseIdentifier: "Cell")
+    tableView.registerClass(TwoLabelCell<Repository>.self, forCellReuseIdentifier: "Cell")
     
     tableView.estimatedRowHeight = 50
     tableView.rowHeight = UITableViewAutomaticDimension
@@ -43,7 +43,7 @@ extension TraditionalRepositoriesTableViewController {
     
     let repository = repositories[indexPath.row]
     
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TwoLabelCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TwoLabelCell<Repository>
     cell.nameLabel.text = repository.name
     cell.descriptionLabel.text = repository.description
     return cell

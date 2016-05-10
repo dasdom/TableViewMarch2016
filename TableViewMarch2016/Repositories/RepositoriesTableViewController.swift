@@ -8,12 +8,12 @@
 
 import UIKit
 
-class RepositoriesTableViewController<T: protocol<DictCreatable, LabelsPresentable>>: TableViewController<T, TwoLabelCell> {
-
+class RepositoriesTableViewController: TableViewController<TwoLabelCell<Repository>> {
+  
   var username: String? {
     didSet {
       guard let username = username where username.characters.count > 0 else { return }
-      let fetch = APIClient<T>().fetchItems(forUser: username)
+      let fetch = APIClient<Repository>().fetchItems(forUser: username)
       fetch { (items, error) -> Void in
         self.title = username
         guard let theItems = items else { return }
@@ -24,7 +24,7 @@ class RepositoriesTableViewController<T: protocol<DictCreatable, LabelsPresentab
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let nextViewController = DetailViewController()
-    nextViewController.repository = data[indexPath.row] as? Repository
+    nextViewController.repository = data[indexPath.row] //as? Repository
     navigationController?.pushViewController(nextViewController, animated: true)
   }
 }

@@ -8,12 +8,12 @@
 
 import UIKit
 
-class UserSearchTableViewController<T: protocol<DictCreatable, LabelsPresentable, UserProtocol>>: TableViewController<T, TwoLabelCell>, UISearchBarDelegate {
-
+class UserSearchTableViewController: TableViewController<TwoLabelCell<User>>, UISearchBarDelegate {
+  
   var searchString: String? {
     didSet {
       guard let searchString = searchString where searchString.characters.count > 0 else { return }
-      let fetch = APIClient<T>().fetchUsers(forSearchString: searchString)
+      let fetch = APIClient<User>().fetchUsers(forSearchString: searchString)
       fetch { (items, error) -> Void in
         guard let theItems = items else { return }
         self.data = theItems.map { $0 }
@@ -32,13 +32,13 @@ class UserSearchTableViewController<T: protocol<DictCreatable, LabelsPresentable
     tableView.tableHeaderView = searchBar
   }
   
-  func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+  @objc func searchBarSearchButtonClicked(searchBar: UISearchBar) {
     searchBar.resignFirstResponder()
     searchString = searchBar.text
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let next = RepositoriesTableViewController<Repository>()
+    let next = RepositoriesTableViewController()
     next.username = self.data[indexPath.row].name
     navigationController?.pushViewController(next, animated: true)
     

@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol Configurable {
-  func config(withItem item: Any)
+protocol Configurable{
+  associatedtype DataType: Any
+  func config(withItem item: DataType)
 }
